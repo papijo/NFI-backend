@@ -18,9 +18,12 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 
+const mongoUrl =
+  "mongodb+srv://admin1:UKIspgDXeRQ2BORu@cluster0.pyzpf.mongodb.net/nfi?retryWrites=true";
+
 //Database Connection
 mongoose
-  .connect(config.MONGODB_URI, {
+  .connect(mongoUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
